@@ -6,6 +6,7 @@ use App\Repository\BlacklistRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: BlacklistRepository::class)]
+#[ORM\Table(name: 'tbl_blacklist')]
 class Blacklist
 {
     #[ORM\Id]

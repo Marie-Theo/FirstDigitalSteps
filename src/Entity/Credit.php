@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CreditRepository::class)]
+#[ORM\Table(name: 'tbl_credit')]
 class Credit
 {
     #[ORM\Id]

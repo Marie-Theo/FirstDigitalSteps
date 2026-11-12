@@ -25,6 +25,14 @@ class Theme
     #[ORM\OneToMany(targetEntity: Question::class, mappedBy: 'theme', orphanRemoval: true)]
     private Collection $questions;
 
+    /**
+     * @var Collection<int, SlideShow>
+     */
+    #[ORM\OneToMany(targetEntity: SlideShow::class, mappedBy: 'theme')]
+    private Collection $slideShows;
+
+
+
     public function __construct()
     {
         $this->questions = new ArrayCollection();
